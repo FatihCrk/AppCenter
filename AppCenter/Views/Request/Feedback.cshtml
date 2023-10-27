@@ -1,16 +1,18 @@
 ﻿@model AppCenter.Models.Requester
 
 
-<div>
+<div class="card text-center">
+    <div class="card-header">
+        Tebrikler
+    </div>
+    <div class="card-body">
+        <h5 class="card-title">Kaydınız tamamlandı. @Model.FirstName</h5>
+  
+        <p class="card-text">Giriş Yapabilirsiniz</p>
 
-    <h3 class="display-4">Tebrikler @Model.FirstName</h3>
-    <p class="lead">Kaydınız tamamlandı. @Model.FirstName</p>
-    <p class="lead">Giriş Yapabilirsiniz.</p>
-    <hr />
-    <blockquote class="blockquote">
-       <button class="btn-success" asp-action="Index"> Giriş yap</button>
-    </blockquote>
-
-
-
+        <button class="btn-success" asp-action="Index"> Giriş yap</button>
+    </div>
+    <div class="card-footer text-muted">
+        <p class="text-muted">Kayıt tarihi: @Model.RequestDate</p>
+    </div>
 </div>
