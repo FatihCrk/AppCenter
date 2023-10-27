@@ -16,11 +16,12 @@ namespace AppCenter.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken] // Saldırıları önlemek için postlar'da kullanılan attribute.
         public IActionResult Apply([FromForm]Requester model) //FromForm yalnız formdan gelen modeli kabul eder.
         {
 
             Repository.Add(model);
-            return RedirectToAction("/");
+            return View("Feedback",model);
         }
     }
 }
