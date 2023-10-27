@@ -16,7 +16,7 @@ namespace AppCenter.Controllers
         }
 
         [HttpPost]
-        public IActionResult Apply(Requester model)
+        public IActionResult Apply([FromForm]Requester model) //FromForm yalnız formdan gelen modeli kabul eder.
         {
 
             Repository.Add(model);
