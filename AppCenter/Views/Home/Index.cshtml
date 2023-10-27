@@ -4,9 +4,14 @@
 
 <div class="text-center">
     <h1 class="display-4">Haliç Üniversitesi</h1>
-    <h3>Destek Talebi Sistemi</h3>
-    <p>Başvuru yapabilmeniz için öncelikle kayıt olmanız gerekmektedir..</p>
+    <h3 class="text-center" style="margin-top:50px">Destek Talebi Sistemi</h3>
+    <p class="text-center" style="margin-top:50px">Başvuru yapabilmeniz için öncelikle kayıt olmanız gerekmektedir..</p>
 
 
-    <a class="btn btn-primary" href="/Request/Apply"> > Kayıt Ol. </a>
+    <a class="btn btn-primary" style="margin-top:50px" asp-controller="Request" asp-action="Apply"> Kayıt ol </a>
+
+
+
+    <div class="col-md-offset-4 text-center" style="margin-top:50px;">Hesabınız var mı? <button style="margin;" type="submit" class="btn btn-primary my-2" asp-controller="Home" asp-action="Index">Giriş Yap</button></div>
+
 </div>

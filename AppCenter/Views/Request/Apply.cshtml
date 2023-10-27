@@ -1,39 +1,55 @@
-﻿<div class="container">
+﻿@model Requester;
+
+
+<div class="container">
 	<div class="row">
 		<div class="col-sm-3 mx-auto" style="float:none; margin:auto">
+			<h3 class="mb-3">Kayıt Formu</h3>
 
 
+			<form method="post" asp-action="Apply">
+				<div class="form-group my-2">
+					<label asp-for="FirstName" class="col-md-3 control-label">Adınız</label>
+					<input asp-for="FirstName" class="form-control" id="FirstName" aria-describedby="Adınız" placeholder="Adınız">
 
-
-			<h3 class="">Sistem Kayıt Formu</h3>
-
-
-			<form>
-				<div class="form-group">
-					<label for="FirstName" class="col-md-3 control-label">Adınız</label>
-					<input type="text" class="form-control" id="firstname" aria-describedby="Adınız" placeholder="Adınız">
-					
 				</div>
-				<div class="form-group">
-					<label for="Soyadınız">Soyadınız</label>
-					<input type="text" class="form-control" id="lastname" aria-describedby="Soyadınız" placeholder="Soyadınız">
-					
+				<div class="form-group my-2">
+					<label asp-for="LastName">Soyadınız</label>
+					<input type="text" class="form-control" id="LastName" name="Lastname" aria-describedby="Soyadınız" placeholder="Soyadınız">
+
 				</div>
-				<div class="form-group">
-					<label for="exampleInputEmail1">Email adresiniz</label>
-					<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-				
+				<div class="form-group my-2">
+					<label asp-for="Email">Email adresiniz</label>
+					<input asp-for="Email" class="form-control" id="Email" aria-describedby="emailHelp" placeholder="Enter email">
+
 				</div>
-				<div class="form-group">
-					<label for="exampleInputPassword1">Şifreniz</label>
+				<div class="form-group my-2">
+					<label asp-for="Password">Şifreniz</label>
 					<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Şifreniz">
 				</div>
-				
-				<div class="form-group">
+
+				<div class="form-group my-2">
 					<label for="exampleInputPassword1">Şifrenizi Tekrar girin</label>
 					<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Şifrenizi tekrar giriniz.">
 				</div>
-				<button style="margin-top:5px; float:right;" type="submit" class="btn btn-primary">Kaydet</button>
+
+				<div class="form-group my-2">
+					<label asp-for="BlockNumber">Blok ve oda numaranızı giriniz</label>
+					<input asp-for="BlockNumber" type="text" class="form-control" id="roomNumber" placeholder="12415 benzer şekilde giriniz.">
+				</div>
+				<div class="row">
+
+
+					<div class="col">
+						<button style="float:left;" type="submit" class="btn btn-danger my-2" asp-controller="Home" asp-action="Index">Vazgeç</button>
+						<button style="float:right;" type="submit" class="btn btn-primary my-2" asp-controller="Home" asp-action="Index">Kaydet</button>
+					</div>
+					
+
+					
+				</div>
+				<div class="col-md-offset-4 text-center" style="margin-top:50px;">Hesabınız var mı? <button style="margin;" type="submit" class="btn btn-primary my-2" asp-controller="Home" asp-action="Index">Giriş Yap</button></div>
+
 			</form>
 
 		</div>

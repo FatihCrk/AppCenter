@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using AppCenter.Models;
 
 namespace AppCenter.Controllers
 {
@@ -12,6 +13,14 @@ namespace AppCenter.Controllers
         public IActionResult Apply()
         {
             return View();
+        }
+
+        [HttpPost]
+        public IActionResult Apply(Requester model)
+        {
+
+            Repository.Add(model);
+            return RedirectToAction("/");
         }
     }
 }
